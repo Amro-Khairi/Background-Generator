@@ -28,5 +28,6 @@ h3 {
 
 .randombtn {
     background: linear-gradient(to right, red , yellow);
-    
+    border-radius: 20px;
+	margin-top: 20px;
 }
