@@ -5,53 +5,16 @@ var body = document.getElementById("gradient");
 var randombtn = document.getElementById("randombtn");
 
 function setGradient() {
-	body.style.background = 
-	"linear-gradient(to right, " 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
-
-	randombtn.style.background = 
-	"linear-gradient(to right, " 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
-
-
+	body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
+	randombtn.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
 	css.textContent = body.style.background + ";";
 }
 
 color1.addEventListener("input", setGradient);
-
 color2.addEventListener("input", setGradient);
-//
-
-function initialGradient() {
-	body.style.background = 
-	"linear-gradient(to right, " 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
-
-	randombtn.style.background = 
-	"linear-gradient(to right, " 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
-
-	css.textContent = body.style.background + ";";
-}
-
-window.addEventListener("DOMContentLoaded", initialGradient);  //DOMContentLoaded OR load
-
-//
+window.addEventListener("DOMContentLoaded", setGradient);  //DOMContentLoaded OR load
 
 var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-
 function generateRandomColor () {
 	var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 	return randomColor;
